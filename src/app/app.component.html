@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Time Stocks</title>
+  </head>
+
+  <body>
+    <div class="Container">
+      <div class="row">
+        <div class="column" *ngFor="let data of stocks; let i = index">
+          <div class="card" [ngClass]="togglesButton[i] ? 'card1' : 'card2'">
+            <h1>{{data?.value[0][0]?.meta?.symbol}}</h1>
+            <p class="dollars">${{data?.value[0][0]?.meta?.regularMarketPrice}}</p>
+            <p class="amount">+{{data?.value[0][0]?.meta?.priceHint}}<br />({{data?.value[0][0]?.meta?.chartPreviousClose}})</p>
+            <h3>Today High Price</h3>
+            <p class="time">{{ getHighPrice(data?.value[0][0]?.indicators?.quote[0]?.high) }}</p>
+            <h3>Today Low Price</h3>
+            <p class="time">{{ getLowPrice(data?.value[0][0]?.indicators?.quote[0]?.low) }}</p>
+            <h3>Last Trade</h3>
+            <p class="time">{{data?.value[0][0]?.meta?.firstTradeDate | date:'hh:mm:ss'}}</p>
+            <label class="switch">
+              <input type="checkbox" [checked]="togglesButton[i]" (change)="changeToggle(i)"/>
+              <span *ngIf="togglesButton[i]" class="round slider">
+                <p class="on-btn">ON</p>
+                </span>
+             <span *ngIf="!togglesButton[i]" class="round slider-non-active">
+                <p class="off-btn">OFF</p>
+                </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

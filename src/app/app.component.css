@@ -1,0 +1,254 @@
+.Container {
+	display: flex;
+	width: 100%;
+    /* height: 100%; */
+	background: #f0f0f0;
+    padding: 15px;
+    height: 640px;
+}
+
+* {
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+    background: #f0f0f0;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+	float: left;
+	width: 16.6%;
+	padding: 0 10px;
+    height: 590px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {
+	width: 100%;
+	background: white;
+    padding: 10px;
+}
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* Responsive columns */
+  @media only screen and (max-width: 600px) {
+	.column {
+	  width: 100% !important;
+	  display: block !important;
+	  margin-bottom: 20px !important;
+      height: 345px;
+	}
+  .Container {
+    display: flex;
+    width: 100%;
+      /* height: 100%; */
+    background: #f0f0f0;
+      padding: 15px;
+      height: 2600px;
+  }
+    .column {
+        width: 100% !important;
+        display: block !important;
+        margin-bottom: 20px !important;
+        height: 620px;
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+        padding: 16px !important;
+        text-align: center !important;
+        /* background-color: #f1f1f1 !important; */
+        height: 100% !important;
+        border-radius: 7px !important;
+      }
+      .card h1 {
+        margin-bottom: 35px;
+    }
+    .card p {
+      margin-bottom: 38px;
+  }
+  .card h3 {
+    margin-top: 40px;
+}
+.slider.round .off-btn {
+  margin-top: -61px !important;
+  }
+}
+  /* Style the counter cards */
+  .card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
+    height: 100%;
+    border-radius: 7px;
+  }
+
+  .card1 {
+    background-color: #1ece6d;
+  }
+
+  .card2 {
+    background-color: #b6b6b6;
+}
+
+.card3 {
+    background-color: #1ece6d;
+    }
+
+.card4 {
+    background-color: #e94b35;   
+}
+
+.card p {
+    color: #33495f;
+}
+
+.card h1 {
+    font-size: 40px;
+    color: #33495f;
+}
+
+.dollars {
+    font-size: 30px;
+    margin-top: -8px;
+}
+
+.amount {
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: -13px;
+}
+
+.vol {
+    margin-top: -4px;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.card h3{
+    font-size: 22px;
+    margin-top: 25px;
+    color: #33495f;
+}
+
+.time {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: -21px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 118px;
+    height: 45px;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 34px;
+    width: 34px;
+    left: 7px;
+    bottom: 6px;
+    background-color: #00bd9c;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider-non-active {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider-non-active:before {
+    position: absolute;
+    content: "";
+    height: 34px;
+    width: 34px;
+    left: 7px;
+    bottom: 6px;
+    background-color: #a5a7a7;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #33495f;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #33495f;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(70px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider-non-active.round {
+    border-radius: 34px;
+  }
+
+  .slider.round .on-btn {
+    margin-right: 72px;
+    font-size: 23px;
+    margin-top: 10px;
+    font-weight: 700;
+    color: #00bd9c;
+  }
+
+  .slider-non-active.round .off-btn {
+    margin-top: 9px;
+    margin-left: 30px;
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .slider-non-active.round:before {
+    border-radius: 50%;
+  }
