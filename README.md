@@ -1,16 +1,13 @@
 # Real Time Stocks
 
-This project shows how Angular services and RxJS Observables can
-be used with a WebSockets server to stream data from the server to the
-client.
+This project shows how to stream data from server to client using Angular Web Sockets
+and RXJS Observables.
 
 ## Running the Application
 
 1. Install [Node.js](http://nodejs.org)
 
-2. Install the Angular CLI:
-
-    `npm install -g @angular/cli`
+2. Install the Angular CLI: `npm install -g @angular/cli`
 
 3. Run `npm install` to install app dependencies
 
